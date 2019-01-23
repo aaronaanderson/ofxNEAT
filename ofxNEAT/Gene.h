@@ -2,6 +2,7 @@
 
 struct Connection {
 	unsigned int outputNode;
+	unsigned int inputNode;
 	float weight;
 	bool enabled;
 };
@@ -11,6 +12,9 @@ class Gene {
 
 public:
 
+	float getNodeValue() {
+		return nodeValue;
+	}
 private:
 	float nodeValue;
 	float bias;
@@ -18,6 +22,6 @@ private:
 	unsigned int localAge;
 	bool enabled;//I don't think this is needed (DELETE)
 	vector<Connection> outwardConnections;
-	vector<unsigned int> inwardConnections;
+	vector<&Connection> inwardConnections;
 
 };

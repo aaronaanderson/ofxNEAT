@@ -8,6 +8,7 @@ class Population {
 public:
 
 	Population(unsigned int numInputs, unsigned int numOutputs) {
+		numberOfInputs = numInputs; numberOfOutputs = numOutputs;  
 		Specie temp(numInputs, numOutputs);
 		species.push_back(temp);
 	}
@@ -26,4 +27,5 @@ private:
 	bool checkForSpeciation;
 	unsigned long globalInovationNumber;
 	unsigned int mostFitGenome;
+	unsigned int numberOfInputs, numberOfOutputs;
 };
